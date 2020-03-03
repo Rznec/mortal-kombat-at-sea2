@@ -1,7 +1,9 @@
 package game;
 
+import game.Ship.Frigate;
+
 /**
- * Запускатор.
+ * пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
  */
 public class Runner {
 
