@@ -8,6 +8,7 @@ public class Frigate extends Ship {
     }
 
     public Frigate(int x, int y, int size) {
+
         super(x, y, size);
     }
 

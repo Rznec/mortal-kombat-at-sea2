@@ -11,12 +11,12 @@ public class Menu {
     private static final String ENTER_COMMAND = "\nEnter command: ";
     private static final String EXIT = "[0]: exit the game.";
     private Scanner scannerIn = new Scanner(System.in);
-    private int command;
 
     /**
      * Приветствие игрока.
      */
     private void sayHello() {
+
         System.out.println(WELCOME);
     }
 
@@ -30,8 +30,8 @@ public class Menu {
         fieldBattle.printField();
         System.out.println(EXIT);
         System.out.println(ENTER_COMMAND);
-        command = -300;
-        while (command != 0) {
+        int command = -300;
+        while (true) {
             command = scannerIn.nextInt();
             if (command == 0) {
                 System.out.println("\nQuit the game! Come back for new victories! ;)");

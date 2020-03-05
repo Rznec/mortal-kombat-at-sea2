@@ -12,6 +12,7 @@ public class Logo {
         + "----------------------------------";
 
     public static void printLogo() {
+
         System.out.println(LOGO);
     }
 }
