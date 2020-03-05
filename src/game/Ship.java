@@ -1,9 +1,13 @@
-package game.Ship;
+package game;
 
-// Класс корабля
+/**
+ * Абстрактный класс.
+ */
 public abstract class Ship implements Orientation {
 
-    //Параметры корабля
+    /**
+     * Параметры корабля.
+     */
     public int x;
     public int y;
     public int size;
@@ -11,16 +15,23 @@ public abstract class Ship implements Orientation {
     public int health = size;
     public int damage;
 
-    //Перегрузка конструктора
+    /**
+     * Конструктор класса Корабль
+     * Перегрузка конструкторов.
+     */
     public Ship() {}
 
-    //Конструктор с двумя входными параметрами
+    /**
+     * Конструктор с двумя входными переменными.
+     */
     public Ship(int x, int y) {
 
         this.x = x;
         this.y = y;
     }
-
+    /**
+     * Конструктор с тремя входными переменными.
+     */
     public Ship(int x, int y, int size) {
 
         this.x = x;
@@ -28,24 +39,33 @@ public abstract class Ship implements Orientation {
         this.size = size;
     }
 
-    //метод, возвращающий координату x корабля
+    /**
+     * Метод возвращающий координату корабля x.
+     */
     public String getX() {
 
         return "x= " + x;
     }
 
-    //метод, возвращающий координату y корабля
+    /**
+     * Метод возвращающий координату корабля у.
+     */
     public String getY() {
+
         return "y= " + y;
     }
 
-    //Метод, определяющий состояние корабля
-    //Перегрузка методов
+    /**
+     * Метод, определяющий состояние корабля.
+     * Перегрузка методов.
+     */
     public String condition(int health) {
 
         return "Корабль цел";
     }
-
+    /**
+     * Метод с тремя входными переменными, определяющий состояние корабля.
+     */
     public String condition(int health, int damage) {
         int i;
         i = health - damage;
@@ -58,15 +78,15 @@ public abstract class Ship implements Orientation {
         }
     }
 
-    //метод, определяющий ориентацию корабля
+    /**
+     * Метод, определяющий ориентацию корабля.
+     */
     @Override
-    public void isVertical(boolean vertical) {                                              //метод, определяющий ориентацию корабля
+    public void isVertical(boolean vertical) {
         if (vertical) {
             System.out.println("Корабль расположен вертикально");
         } else {
             System.out.println("Корабль расположен горизонтально");
         }
     }
-
-
 }

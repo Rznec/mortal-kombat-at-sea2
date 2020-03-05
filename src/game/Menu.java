@@ -23,22 +23,19 @@ public class Menu {
     /**
      * Главное меню игры.
      */
-    public void menuGame() {
+    public void menuGame() throws ScannerException {
         FieldBattle fieldBattle = new FieldBattle();
         sayHello();
         System.out.println("Place of battle:");
         fieldBattle.printField();
         System.out.println(EXIT);
         System.out.println(ENTER_COMMAND);
-        int command = -300;
-        while (true) {
-            command = scannerIn.nextInt();
-            if (command == 0) {
-                System.out.println("\nQuit the game! Come back for new victories! ;)");
-                System.exit(0);
-            } else {
-                System.out.println("Wrong command! Try again!");
-            }
+        int command = scannerIn.nextInt();
+        if (command == 0) {
+            System.out.println("\nQuit the game! Come back for new victories! ;)");
+            System.exit(0);
+        } else {
+            throw new ScannerException("Wrong command! Try again!");
         }
     }
 }

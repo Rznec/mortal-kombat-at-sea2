@@ -1,8 +1,13 @@
-package game.Ship;
+package game;
 
+/**
+ * Тест создания кораблей.
+ */
+public class TestShip {
 
-public class Test {
-
+    /**
+     * Основной метод.
+     */
     public static void main(String[] args) {
         AircraftCarrier ac1 = new AircraftCarrier(1, 1);
         ac1.numberOfDeck();
@@ -20,7 +25,7 @@ public class Test {
         cov2.y = 4;
         cov2.color = "grey";
         System.out.println(cov2.getY());
-        cov2.whatColor();
+        System.out.println(cov2.whatColor());
         System.out.println("Корвет создан");
 
         Frigate fr1 = new Frigate();
